@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Films Division Archive</string>
+    <string name="title_activity_list_single_card">list_single_card</string>
+</resources>
