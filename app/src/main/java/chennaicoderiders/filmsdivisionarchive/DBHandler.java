@@ -49,4 +49,16 @@ public class DBHandler extends SQLiteAssetHelper {
 
     }
 
+    public Video getMinVideo(long id){
+        Video video = null;
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT " + F_KEY_NAME + "," + F_KEY_URL + "," + F_KEY_IMAGE_URL + "," + F_KEY_DESC + " FROM " + TABLE_FILM + " WHERE " + F_KEY_ID + "=" + id;
+        Cursor cursor = db.rawQuery(query,null);
+        if (cursor.moveToFirst()) {
+            video = new Video(cursor.getString(1),cursor.getString(0), cursor.getString(3),cursor.getString(2));
+        }
+
+        return video;
+    }
+
 }

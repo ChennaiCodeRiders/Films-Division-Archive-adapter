@@ -107,4 +107,16 @@ public class Video {
         this._duration = _duration;
     }
 
+    public Video(String _url, String _name, String _desc, String _image_url) {
+        this._url = _url;
+        this._name = _name;
+        this._desc = _desc;
+        this._image_url = _image_url;
+
+        this._category = "";
+        this._language = "";
+        this._year = -1;
+        this._director = "";
+        this._duration = "";
+    }
 }
